@@ -1,0 +1,126 @@
+:root {
+--clr-vlgrey: hsl(0, 0%, 95%);
+--clr-borange: hsl(31, 77%, 52%);
+--clr-dcyan:hsl(184, 100%, 22%);
+--clr-vdcyan: hsl(179, 100%, 13%);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    /* outline: 2px solid black;
+    outline-offset: -2px; */
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* ======
+    Layout and styling of page and container
+        ====== */
+body {
+    padding: 3em 1.5em 0;
+    
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-vlgrey);
+
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2em 1em 0;
+}
+
+/* ======
+    Layout and styling flex items
+        ====== */
+.flex {
+    padding: 2.5em 3em 2.5em 3em;
+    border-radius: 0.5em;
+}
+
+.flex1 {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.flex2  {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.flex3 {
+    background-color: hsl(179, 100%, 13%);
+}
+
+/* ======
+    Layout and styling of flex content
+        ====== */
+.flex > img {
+    margin-bottom: 1rem;
+}
+
+.flex > h1 {
+    padding-bottom: 2rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    color: var(--clr-vlgrey);
+}
+.flex > p {
+   
+    padding-bottom: 3rem;
+    color: hsla(0, 0%, 100%, 0.75);
+
+}
+
+.button {
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    background: var(--clr-vlgrey);
+    font-family: inherit;
+    border: 1px solid var(--clr-vlgrey);
+}
+
+.flex1 > .button {
+    color: var(--clr-borange);
+}
+
+.flex2 > .button {
+    color: var(--clr-dcyan);
+}
+
+.flex3 > .button {
+    color: var(--clr-vdcyan);
+    
+}
+
+/* ======
+    change of Layout and styling for screens larger than 900px
+        ====== */
+
+@media (min-width: 900px) {
+    .container {
+        flex-direction: row;}
+
+    .flex {
+        max-width: 18vw;
+        padding: 2.5em 4.5em 2.5em 3em;
+        border-radius: 0.5em;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        background-color: inherit;
+        color: var(--clr-vlgrey);
+    }
+
+}
